@@ -1,17 +1,14 @@
 const express = require('express');
+const consign = require('consign');
 
 const PORT = 3000;
 const app = express();
 
-app.get('/', (req, res) => res.json({status: "NTask API"}));
-
-app.get('/task', (req, res) => {
-    res.json({
-        task:[
-            {title: "Fazer Compras"},
-            {title: "Consertar o PC"}
-        ]
-    })
+consign({
+    verbose: false
 })
+    .include('models')
+    .then('routes')
+    .into(app);
 
-app.listen(PORT, () => console.log(`NTAsk is alive - Porta ${PORT}`))
+app.listen(PORT, () => console.log(`NTAsk is alive - Porta ${PORT}`));
