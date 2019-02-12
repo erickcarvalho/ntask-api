@@ -1,0 +1,26 @@
+{
+  "name": "ntask-api",
+  "version": "1.0.0",
+  "description": "App Training Models",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erickcarvalho/ntask-api.git"
+  },
+  "keywords": [
+    "NTask",
+    "API"
+  ],
+  "author": "Erick Carvalho",
+  "bugs": {
+    "url": "https://github.com/erickcarvalho/ntask-api/issues"
+  },
+  "homepage": "https://github.com/erickcarvalho/ntask-api#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {}
+}
