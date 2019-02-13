@@ -6,7 +6,8 @@ const app = express();
 consign({
     verbose: false
 })
-    .include('models')
+    .include('db.js')
+    .then('models')
     .then('libs/middlewares.js')
     .then('routes')
     .then('libs/boot.js')
