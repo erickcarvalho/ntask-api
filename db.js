@@ -2,10 +2,11 @@ const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
 
-let db = null;
+var db = null;
 
-module.exports = app => {
+module.exports = function(app){
     if (!db) {
+        
         const config = app.libs.config;
         const sequelize = new Sequelize(
             config.database,
@@ -13,6 +14,7 @@ module.exports = app => {
             config.password,
             config.params
         );
+        
         db = {
             sequelize,
             Sequelize,
@@ -30,5 +32,6 @@ module.exports = app => {
             db.models[key].associate(db.models);
         });
     }
+
     return db;
 };
