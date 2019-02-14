@@ -4,7 +4,8 @@
   "description": "App Training Models",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node index.js"
+    "start": "node index.js",
+    "clusters": "node clusters.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/erickcarvalho/ntask-api#readme",
   "dependencies": {
+    "clusters": "0.0.4",
     "consign": "^0.1.6",
     "cors": "^2.8.5",
     "express": "^4.16.4",
